@@ -1,9 +1,11 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {  } from '@fortawesome/free-solid-svg-icons';
-// import { AiOutlineDelete, FaYoutube } from "react-icons/fa";
+import TaskIcon from '@mui/icons-material/Task';
 import { FaBeer } from "react-icons/fa";
+// import ClearIcon from '@mui/icons-material/Clear';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import BackspaceIcon from '@mui/icons-material/Backspace';
+
 function App() {
   //for toggle btn
   const [isCompleteScreen, setIsCompleteScreen] = useState(false);
@@ -48,7 +50,7 @@ function App() {
   // for delete functionality
   const handleDelete = (index) => {
     let reducedTodo = [...allTodos];
-    reducedTodo.splice(index);
+    reducedTodo.splice(index, 1); // Specify the number of elements to be removed
 
     localStorage.setItem("todolist", JSON.stringify(reducedTodo));
     setTodos(reducedTodo);
@@ -80,7 +82,7 @@ function App() {
   //for delete completescreen todo
   const handleDeleteComplete = (index) =>{
     let reducedTodo = [...completedTodo];
-    reducedTodo.splice(index);
+    reducedTodo.splice(index,1);
 
     localStorage.setItem("Completedtodolist", JSON.stringify(reducedTodo));
     setCompletedToDo(reducedTodo);
@@ -146,12 +148,12 @@ function App() {
                 <p>{item.description}</p>
                 </div>
                   <div className="icon11">
-                    <FaBeer
+                    <BackspaceIcon fontSize='large'
                       title="Delete"
                       onClick={() => handleDelete(index)}
                       className="icon"
                     />
-                    <FaBeer
+                    <TaskIcon fontSize='large'
                       title="Completed"
                       onClick={() => handleCheck(index)}
                       className="icon2"
@@ -173,7 +175,7 @@ function App() {
                     <small>Completed On: {item.completedOn}</small>
                   </p></div>
                   <div className="icon11">
-                    <FaBeer
+                    <BackspaceIcon fontSize='large'
                       title="Delete"
                       onClick={() => handleDeleteComplete(index)}
                       className="icon"

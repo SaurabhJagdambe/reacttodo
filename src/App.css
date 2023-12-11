@@ -4,7 +4,9 @@ body{
   color:white;
   overflow: hidden;
 }
-
+body {
+  font-family: 'Roboto', sans-serif;
+}
 h1 {
   text-align: center;
 }
@@ -19,6 +21,7 @@ h1 {
  max-height: 80vh;
  overflow: auto;
  box-shadow: 5px 10px 17px black ;
+ border-radius: 10px;
 
 }
 
@@ -51,38 +54,43 @@ h1 {
 
 .todo-input-item input:focus{
   /* outline: none; */
-  outline: 2px solid rgb(31, 238, 196);
+  outline: 2px solid rgb(85, 169, 247);
 }
-
+input{
+  background-color: rgb(216, 210, 202);
+  border-radius: 5px;
+}
 .primaryBtn{
-  background-color: rgb(13, 190, 154);
+  background-color: rgb(49, 171, 242);
   color: white;
-  border-radius: 0px;
-  margin-top: 25px;
+  border-radius: 5px;
+  margin-top: 32px;
   padding: 10px;
   width:60px;
   cursor: pointer;
 }
 .primaryBtn:hover{
-  background-color: rgb(17, 129, 92);
+  background-color: rgb(91, 187, 243);
 }
 
 .secondaryBtn{
-  background-color: rgb(74, 78, 77);
+  background-color: rgb(104, 107, 106);
   color: white;
-  border-radius: 0px;
+  border-radius: 5px;
   margin-top: 25px;
   padding: 10px;
   width:fit-content;
   cursor: pointer;
+ 
 }
 
 .active{
-  background-color: rgb(0,230,122);
+  background-color: rgb(49, 171, 242);
 }
 
 .btn-area{
   margin-bottom: 15px;
+  margin-left: 270px;
 }
 
 .todo-list{
@@ -90,7 +98,7 @@ h1 {
   flex-direction: column;
 }
 .todo-list-item{
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(87, 85, 85);
   display: flex;
   align-items:center ;
   justify-content: space-between;
@@ -104,7 +112,7 @@ h1 {
 
 .todo-list-item h2{
   font-size:  25px;
-  color: rgb(0,230,122);
+  color: rgb(86, 205, 242);
   font-weight: bold;
   margin: 0;
   text-underline-position: auto;
@@ -118,7 +126,7 @@ h1 {
   padding-left: 3px;
 }
 .todo-list-item p small{
-  color: rgb(110, 141, 131);
+  color: rgb(196, 226, 217);
 }
 
 .icon{
@@ -139,3 +147,5 @@ h1 {
 .icon2:hover{
   color: rgb(0,230,122);
 }
+
+/* new */
